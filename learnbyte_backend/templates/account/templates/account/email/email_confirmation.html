@@ -1,0 +1,9 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center py-5">
+  <h2>Email Verification</h2>
+  <p>If you clicked this link from your email, your account is now verified.</p>
+  <a href="{% url 'account_login' %}" class="btn btn-primary mt-3">Continue to Login</a>
+</div>
+{% endblock %}

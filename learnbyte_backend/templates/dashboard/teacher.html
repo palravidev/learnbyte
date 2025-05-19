@@ -1,0 +1,8 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Instructor Dashboard</h2>
+<p>Welcome, {{ user.username }}!</p>
+<p><strong>Your Role:</strong> {{ user.role|title }}</p>
+{% endblock %}

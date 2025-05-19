@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Search & Hero Section -->
+<section class="bg-light py-5 text-center">
+  <div class="container">
+    <form class="row justify-content-center g-3 mb-4">
+      <div class="col-12 col-md-2">
+        <select class="form-select">
+          <option selected>All</option>
+          <option value="courses">Courses</option>
+          <option value="exams">Exams</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="text" class="form-control" placeholder="Search for courses, exams, topics...">
+      </div>
+      <div class="col-12 col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Search</button>
+      </div>
+    </form>
+    <h1 class="display-5 fw-bold">Learning that fits your needs</h1>
+    <p class="lead">Explore a wide range of courses, prepare for your career, and experience dynamic learning.</p>
+    <a href="{% url 'account_signup' %}" class="btn btn-warning btn-lg px-4 mt-2">Get Started</a>
+  </div>
+</section>
+
+<!-- Features Section (Enhanced Cards) -->
+<section class="container my-5">
+  <div class="row text-center g-4">
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <i class="bi bi-book fs-1 text-primary mb-3"></i>
+          <h5 class="card-title">Explore Courses</h5>
+          <p class="card-text">Discover subjects & skills at any level.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <i class="bi bi-briefcase fs-1 text-success mb-3"></i>
+          <h5 class="card-title">Career Preparation</h5>
+          <p class="card-text">Acquire in-demand skills to become job-ready.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <i class="bi bi-lightning-charge fs-1 text-warning mb-3"></i>
+          <h5 class="card-title">Dynamic Learning</h5>
+          <p class="card-text">Study with interactive, modern content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Courses -->
+<section class="container my-5">
+  <h3 class="mb-4">Featured Courses</h3>
+  <div class="row g-4">
+    <div class="col-6 col-md-3">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://picsum.photos/300/150?random=1" alt="Python" class="card-img-top" style="height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Python for Beginners</h5>
+          <span class="badge text-bg-primary">Programming</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://picsum.photos/300/150?random=2" alt="Marketing" class="card-img-top" style="height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Marketing Fundamentals</h5>
+          <span class="badge text-bg-success">Business</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://picsum.photos/300/150?random=3" alt="Project" class="card-img-top" style="height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Project Management</h5>
+          <span class="badge text-bg-dark">Management</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://picsum.photos/300/150?random=4" alt="Design" class="card-img-top" style="height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Graphic Design Basics</h5>
+          <span class="badge text-bg-info">Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
