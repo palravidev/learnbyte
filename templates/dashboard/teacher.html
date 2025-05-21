@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container py-5">
+  <h2 class="mb-4">Welcome, {{ user.first_name|default:user.email }} 👋</h2>
+  <p class="text-muted">Glad to see you back. Here's what's waiting for you today.</p>
+  <div class="row g-4">
+
+    <!-- My Courses -->
+    <div class="col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">My Courses</h5>
+          <p class="card-text">Manage your published and draft courses.</p>
+          <a href="#" class="btn btn-primary">View Courses</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create New Course -->
+    <div class="col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Create Course</h5>
+          <p class="card-text">Start a new course and share your knowledge.</p>
+          <a href="#" class="btn btn-outline-primary">Create Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student Enrollments -->
+    <div class="col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Student Enrollments</h5>
+          <p class="card-text">Track who enrolled and their learning progress.</p>
+          <a href="#" class="btn btn-outline-primary">View Students</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test & Quiz Management -->
+    <div class="col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Tests & Quizzes</h5>
+          <p class="card-text">Create and assign tests to evaluate learners.</p>
+          <a href="#" class="btn btn-outline-primary">Manage Assessments</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Performance Analytics -->
+    <div class="col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Performance Analytics</h5>
+          <p class="card-text">View how your courses and students are performing.</p>
+          <a href="#" class="btn btn-outline-primary">View Analytics</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Account Settings -->
+    <div class="col-md-6 col-xl-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Account Settings</h5>
+          <p class="card-text">Update your instructor profile and settings.</p>
+          <a href="#" class="btn btn-outline-secondary">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
