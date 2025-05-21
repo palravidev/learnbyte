@@ -1,5 +1,6 @@
 from allauth.account.forms import SignupForm
 from django import forms
+from .models import CustomUser
 
 class CustomSignupForm(SignupForm):
     first_name = forms.CharField(max_length=30, required=True, label="First Name")
@@ -13,3 +14,9 @@ class CustomSignupForm(SignupForm):
         user.role = self.cleaned_data['role']
         user.save()
         return user
+
+# 🔽 Add this for account settings
+class AccountSettingsForm(forms.ModelForm):
+    class Meta:
+        model = CustomUser
+        fields = ['first_name', 'last_name', 'profile_picture']

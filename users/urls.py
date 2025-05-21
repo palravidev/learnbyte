@@ -1,5 +1,6 @@
 from django.urls import path
+from .views import account_settings_view
 
 urlpatterns = [
-    # Empty for now. You can safely remove this file later if not needed.
+    path('dashboard/settings/', account_settings_view, name='account_settings'),
 ]
